@@ -1,0 +1,6 @@
+# created by ignore support plugin
+!/.idea/
+
+
+/build/
+/.gradle/
