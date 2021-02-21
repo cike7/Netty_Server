@@ -6,6 +6,7 @@ import com.zhu.Info.UserInfo;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  * 数据库查询
@@ -16,24 +17,20 @@ public class SqlSelectUser {
 
 	private SqlSelectUser() { }
 
-	public static void main(String[] args) {
-
-//		UserInfo info = new UserInfo();
+//	public static void main(String[] args) {
 //
+//		UserInfo info = new UserInfo();
 //		info.setUser_id(10002);
 //		info.setUser_account("2053095395@qq.com");
 //		info.setUser_password("123");
-
-		//getQueryUserID(info);
-		//getQueryFriendsList(info);
-		//getQueryFriendInfo(info.getUser_id());
-		//getQueryFriendChatMessage(10000,10001);
-
-		//getWriteFriendChatMessage(10000,10001,"????");
-
-		getFriendAuthentication(10001,10000,1);
-
-	}
+//
+//		getQueryUserID(info);
+//		getQueryFriendsList(info);
+//		getQueryFriendChatMessage(10000,10001);
+//		getWriteFriendChatMessage(10000,10001,"????");
+//		getFriendAuthentication(10001,10000,1);
+//
+//	}
 
 	/**
 	 * 查询用户返回id

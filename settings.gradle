@@ -1,1 +1,3 @@
 rootProject.name = 'netty_server'
+include 'test4'
+

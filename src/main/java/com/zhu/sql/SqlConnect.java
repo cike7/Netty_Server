@@ -18,10 +18,11 @@ public class SqlConnect {
 	private static final String USER;
 	// 密码
 	private static final String PWD;
+
 	// 从配置文件初始化参数
 	static {
 		ResourceBundle bundle = ResourceBundle.getBundle("config");
-		DRIVELERS = bundle.getString("DRIVERCLASS");
+		DRIVELERS = bundle.getString("DRIVER");
 		URL = bundle.getString("URL");
 		USER = bundle.getString("USER");
 		PWD = bundle.getString("PWD");

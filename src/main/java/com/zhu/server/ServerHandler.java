@@ -35,21 +35,17 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
         //添加基础相关业务
         //其他服务需要登入成功才能操作
-        relatedService.add(new TypeUserLogin());
-        relatedService.add(new TypeUserRegister());
-        relatedService.add(new TypeUserVerify());
-
-        //创建房间
-        relatedService.add(new TypeGameRoom());
-
-        relatedService.add(new TypeGameBattle());
+        relatedService.add(new TypeUserLogin());//登入
+        relatedService.add(new TypeUserRegister());//注册
+        relatedService.add(new TypeUserVerify());//验证
+        relatedService.add(new TypeGameRoom());//创建房间
+        relatedService.add(new TypeGameBattle());//游戏同步
     }
 
     public void channelRead(ChannelHandlerContext ctx, Object msg){
         channel = ctx.channel();
         //裁剪空缺是为了json解析不易出错
         String str = msg.toString().trim();
-
         System.out.println("收到消息 [客户端] ：" + str);
         //json
         Gson gson = new Gson();
@@ -94,7 +90,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         System.out.println("[客户端]-" + ctx.channel().remoteAddress() + "离开\n");
-
         synchronized (Application.class) {
             //移除客户端
             if (Application.getInstance.clients.containsKey(ctx.channel())) {
@@ -124,7 +119,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         System.out.println("[客户端]-" + ctx.channel().remoteAddress() + "下线了\n");
-
         synchronized (Application.class) {
             //移除客户端
             if (Application.getInstance.clients.containsKey(ctx.channel())) {

@@ -41,9 +41,7 @@ public class Application {
                     childHandler(new ServerInitializer());
             ChannelFuture channelFuture = serverBootstrap.bind(20530).sync();
             System.out.println("服务器启动成功!!! ");
-
             channelFuture.channel().closeFuture().sync();
-
         }finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
@@ -51,8 +49,6 @@ public class Application {
     }
 
     public static void main(String[] args) throws Exception{
-
         new Application();
-
     }
 }
