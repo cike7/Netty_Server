@@ -8,4 +8,4 @@ mail
 json
 aes加密
 
-客户端采用的是unity，项目地址：
+客户端采用的是unity，项目地址：https://github.com/cike7/netty_client
