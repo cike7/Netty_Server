@@ -1,13 +1,9 @@
 package com.zhu.server;
 
 import com.google.gson.Gson;
+import com.zhu.Application;
 import com.zhu.Info.DataPackage;
-import com.zhu.Info.FriendInfo;
-import com.zhu.Info.RequestType;
-import com.zhu.Info.UserInfo;
 import com.zhu.service.*;
-import com.zhu.sql.SqlSelectUser;
-import com.zhu.util.EmailUtils;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

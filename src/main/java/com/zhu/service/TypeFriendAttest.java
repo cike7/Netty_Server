@@ -4,7 +4,7 @@ import com.zhu.Info.DataPackage;
 import com.zhu.Info.FriendInfo;
 import com.zhu.Info.RequestType;
 import com.zhu.Info.UserInfo;
-import com.zhu.server.Application;
+import com.zhu.Application;
 import com.zhu.server.ServerFeedbackClientInfo;
 import com.zhu.server.ServerHandler;
 import com.zhu.sql.SqlSelectUser;

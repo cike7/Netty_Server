@@ -1,5 +1,6 @@
-package com.zhu.server;
+package com.zhu;
 
+import com.zhu.server.ServerInitializer;
 import com.zhu.service.Room;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -23,10 +24,6 @@ public class Application {
 
     public volatile List<Room> rooms = new ArrayList<>();
 
-    /**
-     * 客户端连接池实例
-     */
-    //public static volatile ChannelGroup channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
     private Application() throws Exception{
 

@@ -5,7 +5,7 @@ import com.zhu.Info.DataPackage;
 import com.zhu.Info.GameInfo;
 import com.zhu.Info.GameType;
 import com.zhu.Info.RequestType;
-import com.zhu.server.Application;
+import com.zhu.Application;
 import com.zhu.server.ServerHandler;
 import io.netty.channel.Channel;
 
